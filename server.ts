@@ -21,4 +21,8 @@ app.use(
 );
 app.use("/states", statesRouter);
 
+app.get("/", (req, res) => {
+  res.json("Welcome to Indian States API!");
+});
+
 app.listen(PORT, () => console.log(`Running on port ${PORT}`));
