@@ -1,13 +1,13 @@
 import cors from "cors";
-import express, { Request, Response, NextFunction } from "express";
+import express, { Request, Response } from "express";
 import mongoose from "mongoose";
-import * as dotenv from "dotenv";
+// import * as dotenv from "dotenv";
 import statesRouter from "./routes/statesRouter";
 
-dotenv.config();
+require("dotenv").config({ path: "./.env" });
 
 const url = process.env.MONGO_URL!;
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT;
 const app = express();
 
 mongoose.connect(url);
