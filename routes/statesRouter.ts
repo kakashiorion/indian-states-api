@@ -1,6 +1,6 @@
 import express, { Request, Response } from "express";
 import { getErrorMessage } from "../methods";
-import State, { StateType } from "../models/state";
+import State from "../models/state";
 
 const statesRouter = express.Router();
 

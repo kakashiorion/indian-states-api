@@ -1,5 +1,5 @@
 import cors from "cors";
-import express from "express";
+import express, { Request, Response, NextFunction } from "express";
 import mongoose from "mongoose";
 import * as dotenv from "dotenv";
 import statesRouter from "./routes/statesRouter";
@@ -21,7 +21,7 @@ app.use(
 );
 app.use("/states", statesRouter);
 
-app.get("/", (req, res) => {
+app.get("/", (req: Request, res: Response) => {
   res.json("Welcome to Indian States API!");
 });
 
